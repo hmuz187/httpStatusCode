@@ -1,0 +1,9 @@
+@url_dev=http://localhost:6000/
+
+
+###
+GET {{url_dev}}/about
+
+
+###
+GET {{url_dev}}/test.txt
