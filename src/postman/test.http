@@ -1,9 +1,56 @@
-@url_dev=http://localhost:6000/
+# @url_dev=http://localhost:6000/
+
+
+# ###
+# GET {{url_dev}}/about
+
+
+# ###
+# GET {{url_dev}}/test.txt
+
+@url_dev=http://localhost:6000/v1/api/
+
+###
+POST {{url_dev}}/shop/signup
+Content-Type: application/json 
+x-api-key: e60f3147fe63fd43828e43d0c39749181d00c5bfd332ed214f881bff1285419a531ca68f3fa9ada1f9e43f1b439aa8863ad396cfc7e1a83d020c1a8d861bd37e
+
+{
+    "name": "Shop Minh Hy",
+    "email": "minhHy017@gmail.com",
+    "password": "abc123"
+}
+
+
+
+###login
+POST {{url_dev}}/shop/login
+Content-Type: application/json 
+x-api-key: e60f3147fe63fd43828e43d0c39749181d00c5bfd332ed214f881bff1285419a531ca68f3fa9ada1f9e43f1b439aa8863ad396cfc7e1a83d020c1a8d861bd37e
+
+{
+    "name": "Shop Minh Hy",
+    "email": "minhHy017@gmail.com",
+    "password": "abc123"
+}
+
+
+###logout
+POST {{url_dev}}/shop/logout
+Content-Type: application/json 
+x-api-key: e60f3147fe63fd43828e43d0c39749181d00c5bfd332ed214f881bff1285419a531ca68f3fa9ada1f9e43f1b439aa8863ad396cfc7e1a83d020c1a8d861bd37e
+x-client-id: 64b572a9a797598ea2036299
+athorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGI1NzJhOWE3OTc1OThlYTIwMzYyOTkiLCJlbWFpbCI6Im1pbmhIeTAxN0BnbWFpbC5jb20iLCJpYXQiOjE2ODk2MTMwOTIsImV4cCI6MTY4OTc4NTg5Mn0.v1-CCzg3uhemyo5MS7gpgKH8tH-HNLrXY09rA5Yqi4w
+
 
 
 ###
-GET {{url_dev}}/about
+POST {{url_dev}}/shop/handleRefreshToken
+Content-Type: application/json 
+x-api-key: e60f3147fe63fd43828e43d0c39749181d00c5bfd332ed214f881bff1285419a531ca68f3fa9ada1f9e43f1b439aa8863ad396cfc7e1a83d020c1a8d861bd37e
 
-
-###
-GET {{url_dev}}/test.txt
+{
+    "name": "Shop Minh Hy",
+    "email": "minhHy07@gmail.com",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDk0N2VjMmFkMTg2ZTU4NjQ0MGRkZTciLCJlbWFpbCI6Im1pbmhIeTA3QGdtYWlsLmNvbSIsImlhdCI6MTY4NzYwMDE1OSwiZXhwIjoxNjg4MjA0OTU5fQ.tq0oXniu2NvX6PfWHo1BtCr_quS_tZGmqkqcF6qRvTs"
+}
